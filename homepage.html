@@ -46,52 +46,158 @@ This challenge will test your understanding of linking, structure, forms, tables
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation bar: Link to sections and other HTML files -->
+<header class="card" style="margin:1rem auto; max-width:900px; text-align:center;">
+<h1>Welcome to My Homepage</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+
+<main>
+<section id="contact-intro" class="card">
+<h1>About Me</h1>
+<div class="flex">
+<img class="profile" src="../IMG-20211011-WA0003.jpg" alt="Profile picture of the project owner" />
+<div>
+<p>
+Hi — I'm Israel, a web developer and learner working on small web projects and tutorials.
+This site showcases my practice projects, notes, and resources. If you'd like to collaborate,
+ask a question, or report an issue, please use the contact form below or reach out via the details provided.
+</p>
+<p><strong>Location:</strong> Kigali, Rwanda</p>
+</div>
+</div>
+</section>
+
+
+<section id="contact-form" class="card" style="margin-top:1rem;">
+<h1>Contact</h1>
+<form action="#" method="post" aria-labelledby="contact-form">
+<label for="name">Your name</label>
+<input id="name" name="name" type="text" placeholder="Full name" required />
+
+
+<label for="email">Email</label>
+<input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+
+
+<button type="submit">Send Message</button>
+</form>
+
+
+<p style="margin-top:0.75rem;">Or contact me directly: <a href="mailto:israeladam661@gmail.com">israeladam661.com</a> • +250 795039261</p>
+</section>
+
+
+<section id="skills" class="card" style="margin-top:1rem;">
+<h2>Skills & Interests</h2>
+<ul>
+<li>HTML & CSS (responsive layouts)</li>
+<li>JavaScript (DOM, fetch, small apps)</li>
+<li>Version control with Git & GitHub</li>
+<li>Learning: React, Node.js, and accessibility</li>
+</ul>
+</section>
+</main>
+<main>
+<section id="contact-intro" class="card">
+ <h2>Other Contact Methods</h2>
+  <table id="contact-table" border="1" cellpadding="8">
+    <tr>
+      <th>Method</th>
+      <th>Details</th>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>israeladam661@gmail.com</td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td>+250 795039261</td>
+    </tr>
+    <tr>
+      <td>Location</td>
+      <td>Kigali, Rwanda</td>
+    </tr>
+  </table>
+</section>
+</main>
+
+  <div id="header" class="nav-bar">
     <nav>
-        <!-- Example: <a href="#about">About Section</a> | <a href="#contact">Contact Section</a> | <a href="about.html">About Page</a> | <a href="contact.html">Contact Page</a> -->
+      <a href="#about">About</a> |
+      <a href="#contact">Contact</a>
     </nav>
-    <hr>
-    <!-- Main content area -->
-    <div class="main-content" id="main-content">
-        <!-- Section 1: About  add id call it about section -->
-        <section >
-            <!-- Your About content here -->
-        </section>
-        <!-- Section 2: add id call it  Contact  -->
-        <section >
-            <!-- Your Contact content here -->
-        </section>
+  </div>
+  <div id="main-content">
+    <section id="about" class="section-box">
+      <h1>About Me</h1>
+      <p>Hello! Welcome to my homepage. I’m learning HTML and this page shows my progress.</p>
+    </section>
+
+    <section id="contact" class="section-box">
+      <h1>Contact</h1>
+      <p>You can reach out to me through this form below.</p>
+    </section>
+
+    <div id="iframe-container" class="content-box">
+      <h2>Embedded About Page</h2>
+      <iframe src="https://www.youtube.com/embed/mhNg55_IYiw?list=RDmhNg55_IYiw" width="1324" height="745"</iframe>
+
+    <div id="form-container" class="form-box">
+      <h2>Contact Form</h2>
+      <form action="#" method="post">
+  
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <input type="submit" value="Submit">
+      </form>
     </div>
-    <hr>
-    <!-- Embed another HTML file using iframe add a youtube video -->
-    <div class="iframe-area" id="iframe-area">
-        <!-- Example: <iframe src="about.html" width="400" height="200"></iframe> -->
+
+    <div id="table-container" class="table-box">
+      <h2>Team Members</h2>
+      <table border="1">
+       
+        <tr>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Email</th>
+        </tr>
+        
+        <tr>
+          <td>Ali</td>
+          <td>Designer</td>
+          <td>ali@example.com</td>
+        </tr>
+        <tr>
+          <td>Ahmed</td>
+          <td>Developer</td>
+          <td>Ahmed@example.com</td>
+        </tr>
+        <tr>
+          <td>Hassan</td>
+          <td>Manager</td>
+          <td>hassan@example.com</td>
+        </tr>
+      </table>
     </div>
-    <hr>
-    <!-- Small form with labels and inputs -->
-    <div class="form-area" id="form-area">
-        <!-- Example:
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <input type="submit" value="Submit">
-        </form>
-        -->
-    </div>
-    <hr>
-    <!-- Table to display names but dont copy mine add more names and more rows atleast 3 rows and columns -->
-    <div class="table-area" id="table-area">
-        <!-- Example:
-        <table>
-            <tr><th>Name</th></tr>
-            <tr><td>Alice</td></tr>
-            <tr><td>Bob</td></tr>
-            <tr><td>Charlie</td></tr>
-        </table>
-        -->
-    </div>
-    <!-- Add comments throughout your code explaining your choices! -->
+
+  </div>
+
+  <div id="footer" class="footer-box">
+    <p>&copy; 2025 My Homepage</p>
+  </div>
+
 </body>
 </html>
